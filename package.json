@@ -1,0 +1,25 @@
+{
+  "name": "regulation-finder",
+  "version": "1.0.0",
+  "description": "Simple full-stack mini training project to teach collaboration, Git workflow, polish skills and frontend-backend integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwahabba/Regulation-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mwahabba/Regulation-Finder/issues"
+  },
+  "homepage": "https://github.com/mwahabba/Regulation-Finder#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
