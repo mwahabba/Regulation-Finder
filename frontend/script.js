@@ -24,8 +24,6 @@ async function fetchRegulation() {
     }
 }
 
-
-Display Results:
 function displayClauses(clauses) {
     const container = document.getElementById("results");
     container.innerHTML = "";
