@@ -1,36 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    width: 70%;
-    margin: auto;
-    margin-top: 40px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clause Display</title>
 
-select, button {
-    padding: 10px;
-    margin-right: 10px;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 70%;
+            margin: auto;
+            margin-top: 40px;
+        }
 
-#results {
-    margin-top: 20px;
-}
+        select, button {
+            padding: 10px;
+            margin-right: 10px;
+        }
 
-<link rel="stylesheet" href="styles.css">
+        #results {
+            margin-top: 20px;
+        }
 
-.clause-card {
-    background: #f1f1f1;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-}
+        .clause-card {
+            background: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
 
-function displayClauses(clauses) {
-    const container = document.getElementById("results");
-    container.innerHTML = "";
+<body>
 
-    clauses.forEach(c => {
-        const div = document.createElement("div");
-        div.className = "clause-card";
-        div.textContent = c;
-        container.appendChild(div);
-    });
-}
+    <h2>Clause Viewer</h2>
+
+    <button onclick="testData()">Show Test Clauses</button>
+
+    <div id="results"></div>
+
+    <script>
+        function testData() {
+            const exampleClauses = [
+                "Clause 1: Safety procedures must be followed.",
+                "Clause 2: Equipment must be inspected weekly.",
+                "Clause 3: Emergency exits must remain accessible."
+            ];
+            displayClauses(exampleClauses);
+        }
+
+        function displayClauses(clauses) {
+            const container = document.getElementById("results");
+
+            if (!clauses || clauses.length === 0) {
+                container.innerHTML = "<p>No clauses found.</p>";
+                return;
+            }
+
+            container.innerHTML = "";
+
+            clauses.forEach(text => {
+                const div = document.createElement("div");
+                div.className = "clause-card";
+                div.textContent = text;
+                container.appendChild(div);
+            });
+        }
+    </script>
+
+</body>
+</html>
