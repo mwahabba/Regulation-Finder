@@ -9,7 +9,7 @@ async function fetchRegulation() {
     }
 
     try {
-        const response = await fetch(http://localhost:4000/regulation/${part});
+        const response = await fetch(`http://localhost:4000/regulation/${part}`);
 
         if (!response.ok) {
             document.getElementById("results").innerText = "No data found.";
@@ -20,6 +20,7 @@ async function fetchRegulation() {
 
         displayClauses(data.clauses);
     } catch (err) {
+        console.error(err);
         document.getElementById("results").innerText = "Error fetching data.";
     }
 }
