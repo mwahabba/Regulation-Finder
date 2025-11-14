@@ -1,1 +1,1 @@
-Hello, I'm Namsu Magar.
+"Test commit to verify Git Setup"
