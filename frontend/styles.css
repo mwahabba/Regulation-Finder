@@ -1,1 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+}
 
+select, button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+<link rel="stylesheet" href="styles.css">
+
+.clause-card {
+    background: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+function displayClauses(clauses) {
+    const container = document.getElementById("results");
+    container.innerHTML = "";
+
+    clauses.forEach(c => {
+        const div = document.createElement("div");
+        div.className = "clause-card";
+        div.textContent = c;
+        container.appendChild(div);
+    });
+}
